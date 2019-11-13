@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="../static/images/title_icon.ico" type="image/x-icon">
+    <script src="../static/js/util.js"></script>
+    <title>Q&A system</title>
+</head>
+
+<body>
+    <div class="bg">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="font-size:20px">
+                            EE3080: Question & Answering System&nbsp;(E050)
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="loader" style="display: none"></div>
+        <div id="main" style="display: block">
+		<!--    <form class="form-input"> -->
+                <!--Direction-->
+                <p style="margin-left:2vw; margin-top:12vh; width:-webkit-fill-available">
+                    <b>Direction</b> : Select a paragraph and write your own question.
+                    <br><b>Remember</b> that the answer is always a subphrase of the paragraph.
+                </p>
+
+                <!--Paragraph Textbox-->
+
+                <div style="display: inline-block; position: absolute">
+                    <div>
+                        <h2 class="btn btn-secondary" style="margin-top: 4vh; margin-left:2vw;">
+                            <i class="fas fa-file-alt"></i>
+                            &nbsp;Paragraph
+                        </h2>
+                        <textarea class="form-control" id="Paragraph"
+                            style="height: 40vh; width: 40vw; margin-left:2vw; resize:none" required autofocus></textarea>
+                    </div>
+                </div>
+                <div style="display: inline-block; position: absolute; left: 50vw">
+                    <!--First Q Textbox-->
+                    <div>
+                        <h2 class="btn btn-secondary" style="margin-top: 4vh;"><i class="fas fa-pen"></i>
+                            &nbsp;Question 1</h2>
+                        <textarea class="form-control" id="Q1" style="height: 7vh; width: 40vw; resize:none" required></textarea>
+                        <!--First A Textbox-->
+                        <div class="ansContainer" style="display:none">
+                            <input disabled style="height: 3vh; width: 40vw" id="A1">
+                        </div>
+                        <hr />
+                    </div>
+
+                    <!--Second Q Textbox-->
+                    <div>
+                        <h2 class="btn btn-secondary" style="margin-top: 4vh"><i class="fas fa-pen"></i>
+                            &nbsp;Question 2</h2>
+                        <textarea class="form-control" id="Q2" style="height: 7vh; width: 40vw; resize:none"></textarea>
+                        <!--Second A Textbox-->
+                        <div class="ansContainer" style="display:none">
+                            <input disabled style="height: 3vh; width: 40vw" id="A2">
+                        </div>
+                        <hr />
+                    </div>
+
+                    <!--Third Q Textbox-->
+                    <div>
+                        <h2 class="btn btn-secondary" style="margin-top: 4vh"><i class="fas fa-pen"></i>
+                            &nbsp;Question 3</h2>
+                        <textarea class="form-control" id="Q3" style="height: 7vh; width: 40vw; resize:none"></textarea>
+                        <!--Third A Textbox-->
+                        <div class="ansContainer" style="display:none">
+                            <input disabled style="height: 3vh; width: 40vw" id="A3">
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+                <div style="position: relative; top: 55vh; left: 2vw">
+                <!--Button "clear input"-->
+                <button class="btn btn-secondary" onclick="clearInput()">
+                    <i class="fas fa-eraser"></i>
+                    &nbsp;Clear Input
+                </button>
+
+                <!--Button "submit"-->
+                <button class="btn btn-primary" onclick="submitQuestion()">
+                    <i class="fas fa-search"></i>
+                    &nbsp;Find Answers
+                </button>
+                </div>
+	<!--	</form> -->
+        </div>
+    </div>
+
+</body>
+
+</html>

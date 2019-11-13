@@ -1,0 +1,81 @@
+        .main-title{
+        position: relative;
+        color: #000000;
+        max-width: 100%;
+        font-size: 40px;
+        padding: 10px 16px;
+        background:rgba(255, 255, 255, 0.6);
+        border: solid 2px #e9f7f6;
+        border-radius:5px;
+        }
+        .title{
+        position: relative;
+        color: #ffffff;
+        max-width: 160px;
+        font-size: 20px;
+        padding: 4px;
+        border: solid 1px #e9f7f6;
+        border-radius:5px;
+        background: #1E90FF;
+        font-family: Microsoft YaHei;
+        margin-right: 440px;
+        }
+        /* .bg{
+        background: url(../images/background.jpg) no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        position: relative;
+        } */
+        #main{
+        position: relative;
+        background: rgba(255,255,255,0.2);
+        }
+        .login-button{
+        width: 270px;
+        height: 40px;
+        border: solid 1px #e9f7f6;
+        border-radius:5px;
+        background: #1E90FF;
+        cursor: pointer;
+        outline: none;
+        font-family: Microsoft YaHei;
+        color: white;
+        font-size: 17px;
+        }
+        .login-button:hover{
+        background: #5599FF;
+        }
+        .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        }
+
+        /* Center the loader */
+        #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+
+      /* Safari */
+@-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
